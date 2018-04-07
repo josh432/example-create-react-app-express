@@ -9,7 +9,7 @@ const Main = () =>
   <h1>Workout Logger</h1>
   <Exercise/>
   
-  <h2>History</h2>
+  
   <Saved/>
 
 
