@@ -7,6 +7,19 @@ const Exercise = () =>
     Exercise:
     <input type="text" name="name" />
   </label>
+  <label>
+ 	 Date:
+ 	 <input type="number" />
+	</label>
+	<label>
+    Weight:
+    <input type="number" />
+  </label>
+  <label>
+    Repetitions:
+    <input type="number" />
+  </label>
+
   <input type="submit" value="Submit" />
 </form>
 
