@@ -8,4 +8,4 @@ const Saved = () =>
     </div>
   </div>
 
-export default Saved
+export default Saved;

@@ -5,22 +5,23 @@ const Exercise = () =>
   <form>
   <label>
     Exercise:
-    <input type="text" name="name" />
+    <input type="text" placeholder="ex. bench-press" className="form-control" id="exercise"  />
   </label>
   <label>
  	 Date:
- 	 <input type="number" />
+ 	 <input type="text" id="date" className="form-control"  />
 	</label>
 	<label>
     Weight:
-    <input type="number" />
+    <input type="number" id="weight" className="form-control" />
   </label>
   <label>
     Repetitions:
-    <input type="number" />
+    <input type="number" id="repetitions" className="form-control" />
   </label>
 
-  <input type="submit" value="Submit" />
+  <button type="submit" className="btn btn-primary">Save Workout</button>
+  
 </form>
 
   </div>

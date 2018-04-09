@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import Saved from "./Saved";
 import Exercise from "./Exercise";
 import Results from "./Results";
+
 
 const Main = () =>
   <div>
@@ -18,6 +19,10 @@ const Main = () =>
 
 
 
+
+
  </div>
+
+
 
 export default Main;
