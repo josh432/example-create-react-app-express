@@ -17,6 +17,9 @@ app.use(bodyParser.json());
 
 var workoutController = require("./server/controllers/workout-controller");
 var router = new express.Router();
+app.use(express.static("client/build"));
+//app.use(routes);
+
 //api routes if not using an api?
 // router.get("/all", function(req, res) {
 // 	db.myworkouts.find({}, function(error, found) {
@@ -28,12 +31,12 @@ var router = new express.Router();
 // 	});
 // });
 
-router.get("/api/saved", workoutController.find);
-router.post("/api/saved", workoutController.insert);
-router.delete("/api/saved/:id", workoutController.delete);
-router.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
+// router.get("/api/saved", workoutController.find);
+// router.post("/api/saved", workoutController.insert);
+// router.delete("/api/saved/:id", workoutController.delete);
+// router.get("/*", function(req, res) {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 app.use(router);
 
