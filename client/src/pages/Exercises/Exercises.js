@@ -13,7 +13,8 @@ class Exercises extends Component {
     workout: "",
     date: "",
     weight: "",
-    repetitions: ""
+    repetitions: "",
+    comments: ""
   };
 
    componentDidMount() {
@@ -23,7 +24,7 @@ class Exercises extends Component {
   loadExercises = () => {
   	API.getExercises()
   		.then(res =>
-  			this.setState({ exercises: res.data, workout: "", date: "", weight: "", repetitions:""})
+  			this.setState({ exercises: res.data, workout: "", date: "", weight: "", repetitions:"", comments:""})
   			)
   		.catch(err => console.log(err));
   };
@@ -48,7 +49,8 @@ class Exercises extends Component {
       	workout: this.state.workout
         date: this.state.date,
         weight: this.state.weight,
-        repetitions: this.state.repetitions
+        repetitions: this.state.repetitions,
+        comments: this.state.comments
       })
         .then(res => this.loadExercises())
         .catch(err => console.log(err));
@@ -79,14 +81,20 @@ class Exercises extends Component {
               <Input
                 value={this.state.weight}
                 onChange={this.handleInputChange}
-                name="Weight"
+                name="weight"
                 placeholder="Weight (required)"
               />
                <Input
                 value={this.state.repetitions}
                 onChange={this.handleInputChange}
-                name="Repetitions"
+                name="repetitions"
                 placeholder="Repetitions (required)"
+              />
+              <TextArea
+                value={this.state.comments}
+                onChange={this.handleInputChange}
+                name="comments"
+                placeholder="Comments (Optional)"
               />
 
               <FormBtn
@@ -107,7 +115,7 @@ class Exercises extends Component {
                   <ListItem key={exercise._id}>
                     <Link to={"/exercises/" + exercise._id}>
                       <strong>
-                        {exercise.workout} on {exercise.date} lifted {exercise.weight} for {exercise.repetitions} times.
+                        {exercise.workout} on {exercise.date} lifted {exercise.weight} lbs. for {exercise.repetitions} times.
                       </strong>
                     </Link>
                     <DeleteBtn onClick={() => this.deleteExercise(exercise._id)} />
