@@ -46,7 +46,7 @@ class Exercises extends Component {
     event.preventDefault();
     if (this.state.date && this.state.weight && this.state.repetitions) {
       API.saveExercise({
-      	workout: this.state.workout
+      	workout: this.state.workout,
         date: this.state.date,
         weight: this.state.weight,
         repetitions: this.state.repetitions,
