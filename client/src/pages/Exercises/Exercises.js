@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List/List";
-import { ListItem } from "../../components/List/Listitem";
+import { ListItem } from "../../components/List/ListItem";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Exercises extends Component {
