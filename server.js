@@ -19,7 +19,7 @@ app.use(bodyParser.json());
 var workoutController = require("./server/controllers/workout-controller");
 var router = new express.Router();
 app.use(express.static("client/build"));
-//app.use(routes);
+app.use(routes);
 
 //api routes if not using an api?
 // router.get("/all", function(req, res) {
@@ -38,8 +38,7 @@ app.use(express.static("client/build"));
 // router.get("/*", function(req, res) {
 //   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 // });
-
-app.use(router);
+// app.use(router);
 
 
 const db = process.env.MONGODB_URI || "mongodb://localhost/myworkouts";
