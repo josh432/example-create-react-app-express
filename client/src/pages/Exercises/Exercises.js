@@ -4,7 +4,8 @@ import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
+import { List } from "../../components/List/List";
+import { ListItem } from "../../components/List/Listitem";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Exercises extends Component {
@@ -40,7 +41,7 @@ class Exercises extends Component {
 		this.setState({
 			[name]: value
 		});
-	};	
+	};
 
 	  handleFormSubmit = event => {
     event.preventDefault();
@@ -145,4 +146,3 @@ export default Exercises;
 
 
 
- 
