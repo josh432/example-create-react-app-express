@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
+import Exercise2 from "../../components/Images/Exercise2.png"
 
 class Detail extends Component {
   state = {
@@ -36,6 +37,7 @@ class Detail extends Component {
               <p>
                 {this.state.exercise.comments}
               </p>
+              <img src={ Exercise2 } alt=''/>
             </article>
           </Col>
         </Row>
