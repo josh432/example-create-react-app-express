@@ -7,6 +7,10 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import Exercise1 from "../../components/Images/Exercise1.jpg";
+
+
+
 
 class Exercises extends Component {
   state = {
@@ -58,15 +62,17 @@ class Exercises extends Component {
     }
   };
 
+
   render() {
     return (
       <Container fluid>
-        <Row>
+        <Row >
           <Col size="md-6">
             <Jumbotron>
               <h1>What Exercise Are You Doing?</h1>
+              <i class="fas fa-heartbeat fa-3x"></i>
             </Jumbotron>
-            <form>
+            <form >
               <Input
                 value={this.state.workout}
                 onChange={this.handleInputChange}
@@ -108,7 +114,8 @@ class Exercises extends Component {
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Previous Workouts</h1>
+              <h1>Previous Workouts.</h1>
+              <i class="fas fa-flag-checkered fa-3x"></i>
             </Jumbotron>
             {this.state.exercises.length ? (
               <List>
@@ -122,6 +129,7 @@ class Exercises extends Component {
                     <DeleteBtn onClick={() => this.deleteExercise(exercise._id)} />
                   </ListItem>
                 ))}
+                <img src={ Exercise1 } alt=''/>
               </List>
             ) : (
               <h3>No Results to Display</h3>

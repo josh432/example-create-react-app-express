@@ -23,6 +23,7 @@ class Detail extends Component {
           <Col size="md-12">
             <Jumbotron>
               <h1>
+              <i class="far fa-star fa-2x"></i>
                 {this.state.exercise.workout} on {this.state.exercise.date} lifted {this.state.exercise.weight} lbs. for {this.state.exercise.repetitions} times.
               </h1>
             </Jumbotron>
