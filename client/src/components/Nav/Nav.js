@@ -10,7 +10,7 @@ const Nav = () => (
           <span className="icon-bar" />
        
         <a href="/" className="navbar-brand">
-          SpotME! - A workout log for the gym ...
+          SpotME! - A REACT workout log for the gym ...
         </a>
       </div>
     </div>
