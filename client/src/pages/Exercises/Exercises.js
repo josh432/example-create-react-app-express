@@ -78,30 +78,34 @@ class Exercises extends Component {
                 value={this.state.workout}
                 onChange={this.handleInputChange}
                 name="workout"
-                placeholder="Workout (required)"
+                placeholder="Workout (Required)"
               />
+              <p>Today's date is: </p>
+
+               <Datepicker
+                selected={this.state.date}
+                onChange={this.handleInputChange}
+                />
+
               <Input
                 value={this.state.date}
                 onChange={this.handleInputChange}
                 name="date"
-                placeholder="Date (required)"
+                placeholder="Date (Required)"
               />
-              <Datepicker
-                value={this.state.date}
-                onChange={this.handleInputChange}
-                />
+             
 
               <Input
                 value={this.state.weight}
                 onChange={this.handleInputChange}
                 name="weight"
-                placeholder="Weight (required)"
+                placeholder="Weight (Required)"
               />
                <Input
                 value={this.state.repetitions}
                 onChange={this.handleInputChange}
                 name="repetitions"
-                placeholder="Repetitions (required)"
+                placeholder="Repetitions (Required)"
               />
               <TextArea
                 value={this.state.comments}

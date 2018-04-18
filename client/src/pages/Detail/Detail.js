@@ -33,11 +33,11 @@ class Detail extends Component {
         <Row>
           <Col size="md-10 md-offset-1">
             <article>
-              <h1>Comments</h1>
+              <h1 id="pop">Comments</h1>
               <p>
                 {this.state.exercise.comments}
               </p>
-              <img src={ Exercise2 } alt=''/>
+              <img src={ Exercise2 } id='shrink' alt=''/>
             </article>
           </Col>
         </Row>
