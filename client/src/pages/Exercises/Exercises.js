@@ -7,7 +7,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List/List";
 import { ListItem } from "../../components/List/ListItem";
 import { Input, TextArea, FormBtn } from "../../components/Form";
-import Datepicker  from "../../components/Datepicker/Datepicker";
+import  Datepicker  from "../../components/Datepicker/Datepicker";
 import Exercise1 from "../../components/Images/Exercise1.jpg";
 
 
@@ -80,12 +80,17 @@ class Exercises extends Component {
                 name="workout"
                 placeholder="Workout (required)"
               />
+              <Input
+                value={this.state.date}
+                onChange={this.handleInputChange}
+                name="date"
+                placeholder="Date (required)"
+              />
               <Datepicker
-                selected={this.state.date}
-                onChange={this.handleChange}
-                
+                value={this.state.date}
+                onChange={this.handleInputChange}
                 />
-      
+
               <Input
                 value={this.state.weight}
                 onChange={this.handleInputChange}
@@ -106,7 +111,7 @@ class Exercises extends Component {
               />
 
               <FormBtn
-                disabled={!(this.state.workout && this.state.weight && this.state.repetitions)}
+                disabled={!(this.state.workout && this.state.date && this.state.weight && this.state.repetitions)}
                 onClick={this.handleFormSubmit}
               >
                 Submit Workout
