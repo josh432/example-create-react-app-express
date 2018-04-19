@@ -132,7 +132,7 @@ class Exercises extends Component {
                 {this.state.exercises.map(exercise => (
                   <ListItem key={exercise._id}>
                     <Link to={"/exercises/" + exercise._id}>
-                      <strong>
+                      <strong id='purps'>
                         {exercise.workout} on {exercise.date} lifted {exercise.weight} lbs. for {exercise.repetitions} times.
                       </strong>
                     </Link>

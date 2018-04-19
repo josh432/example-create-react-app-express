@@ -10,6 +10,8 @@ p {
 	color: white;
 }
 
+
+
 #pop{
 	color: white;
 }
@@ -17,4 +19,9 @@ p {
 #shrink {
 	width:10em;
 	height:10em;
+}
+
+#purps {
+	color: purple;
+	font-size: 1.25em;
 }
