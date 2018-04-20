@@ -5,7 +5,7 @@ import API from "../../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
 import { List } from "../../components/List/List";
-import { ListItem } from "../../components/List/ListItem";
+import { ListItem } from "../../components/List/Listitem";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import  Datepicker  from "../../components/Datepicker/Datepicker";
 import Exercise1 from "../../components/Images/Exercise1.jpg";
@@ -93,7 +93,7 @@ class Exercises extends Component {
                 name="date"
                 placeholder="Date (Required)"
               />
-             
+
 
               <Input
                 value={this.state.weight}
