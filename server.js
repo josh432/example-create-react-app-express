@@ -20,8 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 var workoutController = require("./server/controllers/workout-controller");
 var router = new express.Router();
-app.use(express.static("client/build"));
-app.use('/', routes);
+app.use('/static', express.static(path.join(__dirname, 'client/build', 'static')));
+app.use('/api', routes);
 
 //api routes if not using an api?
 // router.get("/all", function(req, res) {
@@ -53,6 +53,8 @@ mongoose.connect(db, function(error) {
 		console.log("mongoose connection is successful");
 	}
 	});
-
+app.get('*', function(req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
