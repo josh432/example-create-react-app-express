@@ -7,19 +7,21 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 5000;
 
-mongoose.Promise = Promise;
+
 
 app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 var workoutController = require("./server/controllers/workout-controller");
 var router = new express.Router();
 app.use(express.static("client/build"));
-app.use(routes);
+app.use('/', routes);
 
 //api routes if not using an api?
 // router.get("/all", function(req, res) {
@@ -42,6 +44,8 @@ app.use(routes);
 
 
 const db = process.env.MONGODB_URI || "mongodb://localhost/myworkouts";
+
+mongoose.Promise = Promise;
 mongoose.connect(db, function(error) {
 	if (error) {
 		console.log(error);
