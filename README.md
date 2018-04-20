@@ -38,10 +38,6 @@ This tells Webpack development server to proxy our API requests to our API serve
 
 Visit my [blog post](https://esausilva.com/2017/11/14/how-to-use-create-react-app-with-a-node-express-backend-api/) entry for a detailed step-by-step guide.
 
-## Giving Back
+## SpotME!
 
-If you would like to support my work and the time I put in making tutorials, you can click the image below to get me a coffee. I would really appreciate it (but is not required).
-
-[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/esausilva)
-
--Esau
+Thanks Esau for the file structure. This is a workout app used to track exercises in the gym. It is a full-stack application built with React, Node.JS, and MongoDB. This was a very challenging project to code and deploy, as I'm still learning my way around React. The deployed app can be viewed here. https://salty-taiga-31769.herokuapp.com/
