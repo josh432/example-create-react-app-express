@@ -93,7 +93,7 @@ class Exercises extends Component {
                 name="date"
                 placeholder="Date (Required)"
               />
-             
+
 
               <Input
                 value={this.state.weight}
